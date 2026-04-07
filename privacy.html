@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusUp — Privacy Policy</title>
+  <link rel="stylesheet" href="style.css?v=20260407b" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --legal-bg: #0a0b10;
+      --legal-surface: rgba(20, 21, 31, 0.96);
+      --legal-surface-2: rgba(255, 255, 255, 0.04);
+      --legal-border: rgba(255, 255, 255, 0.08);
+      --legal-text: #f4f5fb;
+      --legal-text-soft: #b9bdd1;
+      --legal-text-muted: #7f849d;
+      --legal-accent: #c4b8ff;
+    }
+
+    body.legal-page {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--legal-text);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(124,109,250,0.2), transparent 24%),
+        radial-gradient(circle at 100% 12%, rgba(245,166,35,0.13), transparent 20%),
+        radial-gradient(circle at 50% 100%, rgba(34,211,122,0.08), transparent 30%),
+        linear-gradient(180deg, #0a0b10 0%, #10111a 48%, #0c0d13 100%);
+    }
+
+    .legal-shell {
+      min-height: 100vh;
+      padding: 2.25rem 1.25rem 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.1rem;
+    }
+
+    .legal-back,
+    .legal-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .legal-back {
+      width: min(100%, 840px);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--legal-text-soft);
+      font-size: 0.95rem;
+    }
+
+    .legal-card {
+      width: min(100%, 840px);
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0) 30%),
+        linear-gradient(180deg, var(--legal-surface), rgba(16, 17, 26, 0.94));
+      border: 1px solid var(--legal-border);
+      border-radius: 30px;
+      padding: 2.75rem;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.34);
+      backdrop-filter: blur(20px);
+    }
+
+    .legal-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 180px;
+      background: linear-gradient(135deg, rgba(124,109,250,0.22), rgba(245,166,35,0.08) 58%, transparent);
+      pointer-events: none;
+    }
+
+    .legal-eyebrow,
+    .legal-pill {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      border: 1px solid var(--legal-border);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .legal-eyebrow {
+      padding: 0.45rem 0.9rem;
+      color: #d8d2ff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
+    }
+
+    .legal-title {
+      position: relative;
+      margin: 0 0 0.85rem;
+      max-width: 12ch;
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.4rem, 7vw, 4.6rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+    }
+
+    .legal-subtitle {
+      position: relative;
+      max-width: 52ch;
+      margin: 0 0 1rem;
+      color: #b1b4c9;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .legal-meta-row,
+    .legal-actions {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .legal-meta-row {
+      margin-bottom: 2rem;
+    }
+
+    .legal-pill {
+      min-height: 38px;
+      padding: 0.7rem 0.95rem;
+      color: var(--legal-text);
+      font-size: 0.9rem;
+    }
+
+    .legal-pill-muted,
+    .legal-footer-label {
+      color: #a4a8bf;
+    }
+
+    .legal-body {
+      position: relative;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .legal-section {
+      padding: 1.25rem 1.3rem;
+      border-radius: 20px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
+        rgba(255,255,255,0.01);
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+
+    .legal-section h2 {
+      margin: 0 0 0.75rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .legal-section p,
+    .legal-section li {
+      color: var(--legal-text-soft);
+      line-height: 1.75;
+      font-size: 0.98rem;
+    }
+
+    .legal-section ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .legal-footer {
+      position: relative;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--legal-border);
+    }
+
+    .legal-footer-label {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 1rem;
+    }
+
+    .legal-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 1rem 1.15rem;
+      border-radius: 16px;
+      border: 1px solid var(--legal-border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
+      color: var(--legal-text);
+    }
+
+    .legal-action-secondary {
+      color: #bec2d6;
+    }
+
+    .legal-action-arrow {
+      color: var(--legal-accent);
+    }
+
+    @media (max-width: 640px) {
+      .legal-shell {
+        padding: 1rem;
+      }
+
+      .legal-card {
+        padding: 1.4rem;
+        border-radius: 24px;
+      }
+
+      .legal-title {
+        max-width: none;
+        font-size: clamp(2rem, 12vw, 3rem);
+      }
+
+      .legal-actions {
+        flex-direction: column;
+      }
+
+      .legal-action {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .legal-section {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="legal-page">
+  <div class="legal-shell">
+    <a class="legal-back" href="auth.html">
+      <span class="legal-back-arrow">←</span>
+      <span>Back to FocusUp</span>
+    </a>
+
+    <main class="legal-card">
+      <div class="legal-eyebrow">Legal</div>
+      <h1 class="legal-title">Privacy Policy</h1>
+      <p class="legal-subtitle">Effective date: April 7, 2026</p>
+      <div class="legal-meta-row">
+        <span class="legal-pill">How FocusUp handles data</span>
+        <span class="legal-pill legal-pill-muted">Storage, usage, and account privacy</span>
+      </div>
+
+      <div class="legal-body">
+      <section class="legal-section">
+        <h2>Overview</h2>
+        <p>This Privacy Policy explains what information FocusUp collects, how it is used, and how it is protected when you use the service.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Information You Provide</h2>
+        <p>When you create an account or use FocusUp, you may provide personal information such as your email address, username, profile details, tasks, scheduled items, birthdays, and other productivity data you choose to store in the app.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>How Information Is Used</h2>
+        <p>FocusUp uses your information to provide core app functionality, maintain your account, sync your data across sessions, improve reliability, and communicate important service-related updates when needed.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Authentication and Account Data</h2>
+        <p>Authentication and account access are handled through the services integrated into the app. You are responsible for keeping your login credentials secure.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Data Storage</h2>
+        <p>Your information may be stored in databases or third-party infrastructure used to operate FocusUp. Reasonable technical and organizational measures are used to protect stored information, but no system can guarantee absolute security.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Data Sharing</h2>
+        <p>FocusUp does not sell your personal information. Data may be shared only with service providers or infrastructure partners when needed to operate, maintain, or secure the service, or when required by law.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Cookies and Similar Technologies</h2>
+        <p>FocusUp or the services it relies on may use cookies, local storage, or similar technologies to keep you signed in, remember preferences, and support normal app functionality.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Your Choices</h2>
+        <p>You may update certain account information through the app. If you would like your account or stored data removed, you should contact the service owner through the available support channel.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Children's Privacy</h2>
+        <p>FocusUp is not intended for children under the age required by applicable law to consent to data processing without parental involvement.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Changes to This Policy</h2>
+        <p>This Privacy Policy may be updated from time to time. Continued use of FocusUp after changes become effective means you accept the revised policy.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>Contact</h2>
+        <p>If you have questions about this Privacy Policy or your data, contact the site owner through the contact information or support channel provided with the service.</p>
+      </section>
+      </div>
+
+      <div class="legal-footer">
+        <span class="legal-footer-label">Also see</span>
+        <div class="legal-actions">
+          <a class="legal-link legal-action" href="terms.html">
+            <span>Terms of Service</span>
+            <span class="legal-action-arrow">↗</span>
+          </a>
+          <a class="legal-link legal-action legal-action-secondary" href="auth.html">
+            <span>Return to App</span>
+            <span class="legal-action-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
